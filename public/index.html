@@ -12,16 +12,6 @@
     <meta name="msapplication-config" content="browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <!-- END FAVICONS -->
-    <!-- <script language="JavaScript">
-        function getDetails(obj){
-        clickX = window.event.x-obj.offsetLeft;
-        clickY = window.event.y-obj.offsetTop;
-            if((clickX>=100&&clickX<=200)&&(clickY>=100&&clickY<=200))
-            {
-            alert(" You are between (100,100) And (200,200) of the Image");
-            } 
-        }
-        </script> -->
     <link rel="stylesheet" href="styles.css">
     <script src="./page1info.js"></script>
 </head>
@@ -31,7 +21,6 @@
         <div class="page">
             <img class="coveredImage" src="images/page1.png" onload={loadDefault()} onclick={getDetails(this)} onmousemove={logXY(this)} id="frontpage-img" height=800 width=600/>
             <canvas class="coveringCanvas" id="myCanvas" onclick={getDetails(this)} onmousemove={logXY(this)} height=800 width=600></canvas>
-            <!-- <script>loadDefault();</script>  -->
         </div>
         <div class="info" id="info" height=800 width=300>
             
