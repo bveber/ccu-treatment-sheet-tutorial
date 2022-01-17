@@ -1,0 +1,36 @@
+<!Doctype html>
+<head>
+    <meta charset="utf-8">
+        <!-- BEGIN FAVICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#c5050c">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="msapplication-TileColor" content="#c5050c">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- END FAVICONS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="./page2.js"></script>
+    <script src="./utils.js"></script>
+    <div class="container middle">
+        <div class="pageMiddle">
+            <img class="coveredImage wide" src="images/page2.jpeg" onload={loadDefault(this)} id="frontpage-img" height=800 width=1200/>
+            <canvas class="coveringCanvas" id="myCanvas" onclick={getDetails(this)} height=800 width=1200></canvas>
+        </div>
+        <div class="infoMiddle" id="info">
+            <a href="./page1.html" class="previous round">&laquo;</a>
+            <a href="./page3.html" class="next round">&raquo;</a>
+        </div>
+    </div>
+</body>
+
+
+
+<footer id="footer">Created by Molly Racette and Brandon Veber</footer>
+</html>

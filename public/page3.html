@@ -16,17 +16,18 @@
 </head>
 
 <body>
-    <script src="./page1Info.js"></script>
+    <script src="./page3.js"></script>
+    <script src="./utils.js"></script>
     <div class="container">
         <div class="page">
-            <img class="coveredImage" src="images/page1.png" onload={loadDefault()} onclick={getDetails(this)} onmousemove={logXY(this)} id="frontpage-img" height=800 width=600/>
+            <img class="coveredImage" src="images/page3.jpeg" onload={loadDefault(this)} id="backpage-img" height=800 width=600/>
             <canvas class="coveringCanvas" id="myCanvas" onclick={getDetails(this)} onmousemove={logXY(this)} height=800 width=600></canvas>
         </div>
         <div class="info" id="info" height=800 width=300>
-            
-
+            <a href="./page2.html" class="previous round">&laquo;</a>
         </div>
     </div>
+    
 </body>
 
 

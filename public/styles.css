@@ -1,23 +1,43 @@
+@import
+url('https://fonts.googleapis.com/css?family=Calibri&display=swap');
+
 .container {
     display: flex;
-    padding: 0px;
+    padding: 0px; 
+    height: 900px;
 }
 
 .page {
     float:left;
     width:66%;
     overflow:hidden;
+    /* top:0px;  */
+}  
+
+.pageMiddle{
+  float:left;
+  width:90%;
+  overflow:hidden;
+  /* top:0px;  */
 }  
 
 .info{
     float:left;
     width:34%;
     overflow:hidden;
+    /* top:0px; left:0px; */
 }
 
-.coveredImage{ 
-    position:absolute;
-    top:0px; left:0px;
+.infoMiddle{
+  float:left;
+  width:10%;
+  overflow:hidden;
+  /* top:0px; left:0px; */
+}
+
+.coveredImage{
+  position:absolute;
+  top:0px; left:0px;
 }
 
 .coveringCanvas{ 
@@ -25,3 +45,46 @@
     top:0px; left:0px;
     z-index:0;
 }
+
+.tall{
+  height: 800px; width: 600px;
+}
+
+.wide{
+  height: 800px; width: 1200px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+  }
+  
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .previous {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  .next {
+    background-color: #5536c4;
+    color: white;
+  }
+  
+  .round {
+    border-radius: 50%;
+  }
+
+  #footer {
+    background-color: #F3F3F3;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    position:fixed;
+    bottom:0;
+    /* top:900px; */
+    width:100%;
+  }
