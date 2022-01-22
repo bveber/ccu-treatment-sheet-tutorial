@@ -18,6 +18,31 @@ function findBox(x ,y, boundaries) {
     }
 }
 
+function createModal(box) {
+    let modalBody = document.getElementById('modalBody')
+    modalBody.setAttribute("name", box)
+    modalBody.innerHTML = infos[box]
+    // let modalBody = document.getElementById('modalBody')
+    // modalBody.setAttribute("name", box)
+    // modalBody.innerHTML = infos[box]
+    // document.getElementById('modal').appendChild(modalDiv)
+    // let modalDiv = document.getElementById('modal')
+    // modalDiv.modal("show")
+    $('#modal').modal("show")
+    console.log('showing...')
+    var c = document.getElementById("myCanvas");
+    console.log('createModal - getElement: ', c)
+    var ctx = c.getContext("2d");
+    // ctx.beginPath();
+    let coords = boundaries[box]
+    console.log('createModal - coords: ',coords)
+    console.log(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1))
+    // ctx.strokeRect(10, 10, 10, 10)
+    ctx.strokeStyle = "#FF0000";
+    ctx.strokeRect(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1));
+    // ctx.stroke();
+}
+
 function createInfo(box) {
     let infoDiv = document.createElement('div')
     infoDiv.setAttribute("id", "infoContainer")
@@ -33,8 +58,16 @@ function createInfo(box) {
     console.log('createInfo - coords: ',coords)
     console.log(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1))
     // ctx.strokeRect(10, 10, 10, 10)
+    ctx.strokeStyle = "#FF0000";
     ctx.strokeRect(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1));
     // ctx.stroke();
+}
+
+function loadDefaultModal() {
+    // console.log('loading')
+    // console.log(img)
+    // draw()
+    createModal("defaultInstructions")
 }
 
 function loadDefault() {
@@ -44,11 +77,15 @@ function loadDefault() {
     createInfo("defaultInstructions")
 }
 
-function deleteInfo(reset) {       
-    let elem = document.getElementById("infoContainer")
+function clearRect() {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
-    ctx.clearRect(0, 0, 800, 600)
+    ctx.clearRect(0, 0, 1200, 800)  
+}
+
+function deleteInfo(reset) {       
+    let elem = document.getElementById("infoContainer")
+    clearRect()
     // draw()
     if (elem) {
         elem.remove()
@@ -56,6 +93,18 @@ function deleteInfo(reset) {
     if (reset) {
         createInfo('defaultInstructions')
     }
+}
+
+function getDetailsModal(){
+    hoverX = window.event.pageX;
+    hoverY = window.event.pageY;
+    console.log('general mouseover', window.event.pageX, window.event.pageY)
+    box = findBox(hoverX, hoverY, boundaries)
+    existingElement = document.getElementById("infoContainer")
+    console.log('existing Elements: ', existingElement)
+    if (box) {
+        createModal(box)
+    } 
 }
 
 function getDetails(){
@@ -86,3 +135,31 @@ function getDetails(){
 function logXY() {
     console.log(window.event.pageX, window.event.pageY)
 }
+
+// $('#modal').on('hide.bs.modal', function (e) {
+//     console.log("hide")
+//     clearRect();
+// })
+
+document.addEventListener(
+    "click",
+    function(event) {
+      // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+      if (
+        event.target.matches(".button-close-modal") ||
+        !event.target.closest(".modal")
+      ) {
+        closeModal()
+      }
+    },
+    false
+  )
+  
+  function closeModal() {
+    // document.querySelector(".modal").style.display = "none"
+    if ($('#modal').hasClass('show')) {
+        console.log('clearing rect')
+        clearRect();
+    }
+    $('#modal').modal("hide")
+  }
