@@ -1,6 +1,16 @@
 const therapeutics = `
 <h1>Therapeutics</h1>
 <p>This is some information about therapeutics</p>
+<p>This is some information about therapeutics</p>
+<p>This is some information about therapeutics</p>
+<p>This is some information about therapeutics</p>
+<p>This is some information about therapeutics</p>
+<p>This is some information about therapeutics</p>
+<p>This is some information about therapeutics</p>
+<p>This is some information about therapeutics</p>
+<p>This is some information about therapeutics</p>
+<p>This is some information about therapeutics</p>
+<p>This is some information about therapeutics</p>
 `
 
 const weight = `

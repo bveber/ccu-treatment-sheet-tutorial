@@ -146,9 +146,13 @@ document.addEventListener(
     function(event) {
       // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
       if (
-        event.target.matches(".button-close-modal") ||
-        !event.target.closest(".modal")
+            (
+                event.target.matches(".button-close-modal") ||
+                !event.target.closest(".modal")
+            ) & 
+            ($('.modal').hasClass('show'))
       ) {
+        console.log('click')
         closeModal()
       }
     },
@@ -157,9 +161,9 @@ document.addEventListener(
   
   function closeModal() {
     // document.querySelector(".modal").style.display = "none"
-    if ($('#modal').hasClass('show')) {
+    // if ($('.modal').hasClass('show')) {
         console.log('clearing rect')
         clearRect();
-    }
-    $('#modal').modal("hide")
+        $('.modal').modal("hide")
+    // }
   }

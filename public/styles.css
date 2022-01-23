@@ -118,19 +118,17 @@ a {
 .modal {
   background: transparent;
   position: fixed;
-  /* margin: auto; */
   top: 35px !important;
   width: 600px;
-  height: 100%;
   left: 605px;
-  /* overflow: auto;
-  overflow-y: auto; */
+  height: 600px;
 }
 
 .modal-content{
   /* background: transparent !important; */
   background: rgba(255, 0, 0, 0.25);
   border: 0px !important;
+  height:600px;
 }
 
 .modal-header {
@@ -140,7 +138,7 @@ a {
 }
 
 .modal-backdrop.show {
-  opacity: 0.1;
+  opacity: 0.25;
 }
 
 /* .modal-backdrop.in
