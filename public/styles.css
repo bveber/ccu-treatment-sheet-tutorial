@@ -46,12 +46,12 @@ url('https://fonts.googleapis.com/css?family=Calibri&display=swap');
 }
 
 .coveredImage{
-  position:relative;
+  position:absolute;
   top:0px; left:0px;
 }
 
 .coveringCanvas{ 
-    position:relative;
+    position:absolute;
     top:0px; left:0px;
     z-index:0;
 }
