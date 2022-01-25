@@ -118,7 +118,7 @@ a {
 .modal {
   background: transparent;
   position: fixed;
-  top: 35px !important;
+  top: 20px !important;
   width: 600px;
   left: 605px;
   height: 600px;
@@ -126,7 +126,7 @@ a {
 
 .modal-content{
   /* background: transparent !important; */
-  background: rgba(255, 0, 0, 0.25);
+  background: rgba(226, 223, 223, 0.90);
   border: 0px !important;
   height:600px;
 }
@@ -134,7 +134,7 @@ a {
 .modal-header {
   /* background: rgba(255, 0, 0, 0.25); */
   border: 0px !important;
-  height: 10px
+  height: 50px
 }
 
 .modal-backdrop.show {
