@@ -38,7 +38,8 @@ function createModal(box) {
     console.log('createModal - coords: ',coords)
     console.log(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1))
     // ctx.strokeRect(10, 10, 10, 10)
-    ctx.strokeStyle = "#FF0000";
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 2;
     ctx.strokeRect(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1));
     // ctx.stroke();
 }
