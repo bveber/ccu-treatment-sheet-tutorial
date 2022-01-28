@@ -55,7 +55,7 @@ const infusions = `
     <li>This section contains information about any fluids or liquids that are running continuously into the patient.Examples of infusions include:</li>
     <ul>
         <li>Fluids (plyte, 0.45% NaCl, plasma (FP/FFP), packed red blood cells (pRBC)</li>
-        <li>Pain CRIÃ¢â‚¬â„¢s (ketamine, fentanyl)</li>
+        <li>Pain CRI's (ketamine, fentanyl)</li>
         <li>Sedation (midazolam, butorphanol, dexmedetomidine)
         <li>Pressors (norepinephrine, dobutamine, vasopressin)</li>
         <li>Liquid nutrition via NG tubes</li>
