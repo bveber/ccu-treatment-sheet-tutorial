@@ -19,29 +19,32 @@ url('https://fonts.googleapis.com/css?family=Calibri&display=swap');
 .page {
     float:left;
     width:600px;
-    overflow:hidden;
+    /* overflow:hidden; */
     /* top:0px;  */
 }  
 
 .pageMiddle{
   float:left;
   width:1200px;
-  overflow:hidden;
+  /* overflow:hidden; */
   /* top:0px;  */
 }  
 
 .info{
+    right:-100px;
     float:right;
     width:200px;
-    overflow:hidden;
+    /* overflow:hidden; */
     /* top:10px;
     height:25px; */
 }
 
 .infoMiddle{
+  right:-100px;
   float:right;
+  /* left:1450px; */
   width:200px;
-  overflow:hidden;
+  /* overflow:hidden; */
   /* top:0px; left:0px; */
 }
 
@@ -91,6 +94,7 @@ a {
   .next {
     background-color: #5536c4;
     color: white;
+    position: relative;
   }
   
   .round {
