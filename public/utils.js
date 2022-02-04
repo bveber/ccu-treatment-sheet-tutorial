@@ -142,6 +142,14 @@ function logXY() {
 //     clearRect();
 // })
 
+function openBackPageRemarks() {
+    console.log('openbackpage')
+    location.href="./page3.html";
+    box = findBox(300, 200, boundaries)
+    console.log(box)
+    createInfo(box)
+}
+
 document.addEventListener(
     "click",
     function(event) {
