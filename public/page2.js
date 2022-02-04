@@ -14,16 +14,16 @@ const weight = `
 
 const waterFood = `
 <h1>Food and Water Information</h1>
-<p>In this section, when to offer food and water is highlighted. The specific food and water prescription orders can be referenced from the front of the CCU Treatment Sheet. Information about the patient's intake of food or water is the included in the highlighted box and noted in the Remarks section</p>
+<p>In this section, when to offer food and water is highlighted. The specific food and water prescription orders can be referenced from the <a href="./page1.html?x=450&y=300">front of the treatment sheet</a>. Information about the patient's intake of food or water is the included in the <a href="./page2.html?x=575&y=250">highlighted box</a> and noted in the <a href="./page3.html?x=450&y=300">Remarks section</a> on the back page of the treatment sheet</p>
 `
 
 const infusions = `
 <h1>Infusion Flow Sheet</h1>
-<p>In this section, the name of the infusion is copied from the front of the CCU Treatment Sheet. This area is then used for tracking the infusions provided to the patient.</p>
-    <li>Boluses (of fluids or pain medications) are indicated by writing the amount given in a set of brackets "[]".</li>
+<p>In this section, the name of the infusion is copied from the <a href="./page1.html?x=300&y=400">front of the treatment sheet</a>. This area is then used for tracking the infusions provided to the patient.</p>
+    <li>Boluses (of fluids or pain medications) are indicated by writing the amount given in a <a href="./page2.html?x=420&y=280">set of brackets "[]"</a>.</li>
     <li>An open bracket is used to indicate when a specific infusion was started.</li>
     <li>A closed bracket is used to indicate that a specific infusion was stopped.</li>
-    <li>Fluids are totaled every 4 hours. The total amount the fluid pump has delivered is recorded in the upper left of the divided box and a zero is recorded in the lower right of the divided box to indicate the fluid pump total has been reset. The set fluid rate is then recorded.</li>
+    <li>Fluids are totaled every 4 hours. The total amount the fluid pump has delivered is recorded in the upper left of the divided box and a zero is recorded in the lower right of the divided box to indicate the fluid pump total has been reset. The set fluid rate is then recorded <a href="./page2.html?x=450&y=280">like this</a>.</li>
 `
 
 const fluidOuts = `
@@ -31,16 +31,14 @@ const fluidOuts = `
 <p>This section includes information about fluid losses such as vomiting/regurgitation, defecation and urination.</p>
     <li>Some clinicians prefer to highlight the urination/defecation boxes when they would like the patient taken outside. If it is important your patient be taken out more frequently, then these boxes should be highlighted. Otherwise, canine patients will be taken out for elimination as needed.</li>
     <li>If your patient has a urinary catheter, the urine box should be highlighted when you want the urine volume measured. It is then also important to circle "catheter" and provide "call clinician if" guidelines (call parameters).</li>
-    <li>Urination and defecation are generally recorded on a "+" to "+++" scale. Additional details about elimination can be found in the "Remarks" section on the back of the CCU Treatment Sheet.</li>
+    <li>Urination and defecation are generally recorded on a "+" to "+++" scale. Additional details about elimination can be found in the <a href="./page3.html?x=450&y=300">Remarks section</a> on the back of the CCU Treatment Sheet.</li>
 `
-
-{/* <a href="#" onclick="openBackPageRemarks()">back of the CCU Treatment Sheet</a> */}
 
 const tpr = `
 <h1>Patient Vitals</h1>
 <p>Parameters that are routinely monitored as part of TPR and physical monitoring of the patient are included in this section of the treatment sheet. It is important to include "Call Clinician If" guidelines (call parameters) for all of these patient vitals.</p>
     <li>Make sure that call parameters are specific for your individual patients - if your patient is already febrile, do not set the call parameter the same as you would for a patient who has typically had a normal body temperature.</li>
-    <li>How frequently each of the vitals are assess is indicated by highlighting the corresponding boxes along the flow sheet.</li>
+    <li>How frequently each of the vitals are assess is indicated by highlighting the <a href="./page2.html?x=575&y=500">corresponding boxes</a> along the flow sheet.</li>
     <li>Good TPR times include 8a/8a for q12 TPRs, 8a/4p/12a for q8 TPRs and 8a/2p/8p/2a for q6 TPRs.</li>
     <li>When making treatment sheets, please do not schedule any TPRs (unless critical) at 6a or 6p as this is when the CCU technicians round on the patients in the room. Non-critical TPRs scheduled for 6a/6p will likely get moved to a different treatment time.</li>
 `
@@ -103,13 +101,13 @@ const infusions3 = `
 `
 
 const infusions4 = `
-<h1>Infusion End</h>
+<h1>Infusion End</h1>
 <p>A closed bracket "]" is used to indicate that a specific infusion was stopped.</p>
 `
 
 const infusions5 = `
-<h>Change to Infusion Type or Additives</h>
-<p>Any time the type of fluid or the fluid additives (dextrose, KCl, Kphos) are changed, a new infusion should be prescribed on the front of the CCU Treatment Sheet and added as a new line in the infusions section of the flow sheet. Changing the fluid rate without changing the type or fluid or additives can be denoted on the same infusions line<p>
+<h1>Change to Infusion Type or Additives</h1>
+<p>Any time the type of fluid or the fluid additives (dextrose, KCl, Kphos) are changed, a new infusion should be prescribed on the <a href="./page1.html?x=300&y=400">front of the CCU Treatment Sheet</a> and added as a new line in the infusions section of the flow sheet. Changing the fluid rate without changing the type or fluid or additives can be denoted on the same infusions line <a href="./page2.html?x=800&y=325">like this</a>.<p>
     <li>In this example, the previous infusion of plyte was stopped (indicated by a closed bracket) and a new infusion of plyte + 5% dextrose was started at 80 mL/hr.</li>
 `
 
@@ -123,8 +121,8 @@ const infusions6 = `
 `
 
 const infusions7 = `
-<h1>Change to Infusion Rate</h>
-<p>Changing the fluid rate without changing the type or fluid or additives can be denoted on the same infusions line. An increase in rate is denoted with an up arrow and the new rate while a decrease in fluid rate is denoted by a down arrow and the new rate. This is in contrast to when the infusion type or additives are changed and a new prescription/new infusion line is needed.</p>
+<h1>Change to Infusion Rate</h1>
+<p>Changing the fluid rate without changing the type or fluid or additives can be denoted on the same infusions line. An increase in rate is denoted with an up arrow and the new rate while a decrease in fluid rate is denoted by a down arrow and the new rate. This is in contrast to when the infusion type or additives are changed and a new prescription/new infusion line is needed <a href="./page2.html?x=600&y=325">like this</a>.</p>
     <li>In this example, the fluid rate was decreased to 40 mL/hr. The fluid type (plyte) and additives (5% dextrose) remained unchanged.</li>
 `
 
@@ -145,7 +143,7 @@ const tpr3 = `
 
 const rotate1 = `
 <h1>Point of Care Diagnostics</h1>
-<p>In this example, a glucose and PCV/TP measurement were ordered for 2pm. The glucose measurement was below the "Call Clinician If" parameters. There should then be a comment in the "Remarks" section on the back of the CCU Treatment Sheet about this abnormality.</p>
+<p>In this example, a glucose and PCV/TP measurement were ordered for 2pm. The glucose measurement was below the "Call Clinician If" parameters. There should then be a comment in the <a href="./page3.html?x=450&y=300">Remarks section</a> on the back of the CCU Treatment Sheet about this abnormality.</p>
 `
 
 boundaries = {
@@ -324,14 +322,14 @@ infos = {
     waterFood2: waterFood1,
     waterFood3: waterFood1,
     infusions1: infusions1,
-    infusions2: infusions1,
-    infusions3: infusions1,
-    infusions4: infusions1,
-    infusions5: infusions1,
-    infusions6: infusions1,
-    infusions7: infusions1,
+    infusions2: infusions2,
+    infusions3: infusions3,
+    infusions4: infusions4,
+    infusions5: infusions5,
+    infusions6: infusions6,
+    infusions7: infusions7,
     tpr1: tpr1,
-    tpr2: tpr1,
-    tpr3: tpr1,
+    tpr2: tpr2,
+    tpr3: tpr3,
     rotate1: rotate1,
 }

@@ -14,7 +14,6 @@ function findBox(x ,y, boundaries) {
         if (checkBoundary(x, y, boundaries[box])) {
             return box
         }
-        
     }
 }
 
@@ -22,26 +21,17 @@ function createModal(box) {
     let modalBody = document.getElementById('modalBody')
     modalBody.setAttribute("name", box)
     modalBody.innerHTML = infos[box]
-    // let modalBody = document.getElementById('modalBody')
-    // modalBody.setAttribute("name", box)
-    // modalBody.innerHTML = infos[box]
-    // document.getElementById('modal').appendChild(modalDiv)
-    // let modalDiv = document.getElementById('modal')
-    // modalDiv.modal("show")
     $('#modal').modal("show")
     console.log('showing...')
     var c = document.getElementById("myCanvas");
     console.log('createModal - getElement: ', c)
     var ctx = c.getContext("2d");
-    // ctx.beginPath();
     let coords = boundaries[box]
     console.log('createModal - coords: ',coords)
     console.log(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1))
-    // ctx.strokeRect(10, 10, 10, 10)
     ctx.strokeStyle = "#000000";
     ctx.lineWidth = 2;
     ctx.strokeRect(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1));
-    // ctx.stroke();
 }
 
 function createInfo(box) {
@@ -54,28 +44,43 @@ function createInfo(box) {
     var c = document.getElementById("myCanvas");
     console.log('createInfo - getElement: ', c)
     var ctx = c.getContext("2d");
-    // ctx.beginPath();
     let coords = boundaries[box]
     console.log('createInfo - coords: ',coords)
     console.log(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1))
-    // ctx.strokeRect(10, 10, 10, 10)
     ctx.strokeStyle = "#FF0000";
     ctx.strokeRect(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1));
-    // ctx.stroke();
 }
 
 function loadDefaultModal() {
-    // console.log('loading')
-    // console.log(img)
-    // draw()
-    createModal("defaultInstructions")
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    console.log(urlParams)
+    if (urlParams.has('x') & urlParams.has('y')) {
+        box = findBox(urlParams.get('x'), urlParams.get('y'), boundaries)
+        console.log(box)
+        createModal(box)
+    }
+    else {
+        createModal("defaultInstructions")
+    }
 }
 
 function loadDefault() {
-    // console.log('loading')
-    // console.log(img)
-    // draw()
     createInfo("defaultInstructions")
+}
+
+function loadLink() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    console.log(urlParams.get('x'))
+    closeModal();
+    clearRect();
+    
+    if (urlParams.has('x') & urlParams.has('y')) {
+        box = findBox(urlParams.get('x'), urlParams.get('y'), boundaries)
+        console.log(box)
+        createModal(box)
+    }
 }
 
 function clearRect() {
@@ -87,7 +92,6 @@ function clearRect() {
 function deleteInfo(reset) {       
     let elem = document.getElementById("infoContainer")
     clearRect()
-    // draw()
     if (elem) {
         elem.remove()
     }
@@ -137,11 +141,6 @@ function logXY() {
     console.log(window.event.pageX, window.event.pageY)
 }
 
-// $('#modal').on('hide.bs.modal', function (e) {
-//     console.log("hide")
-//     clearRect();
-// })
-
 function openBackPageRemarks() {
     console.log('openbackpage')
     location.href="./page3.html";
@@ -169,10 +168,9 @@ document.addEventListener(
   )
   
   function closeModal() {
-    // document.querySelector(".modal").style.display = "none"
-    // if ($('.modal').hasClass('show')) {
         console.log('clearing rect')
         clearRect();
         $('.modal').modal("hide")
-    // }
+        var url= document.location.href;
+        window.history.pushState({}, "", url.split("?")[0]);
   }

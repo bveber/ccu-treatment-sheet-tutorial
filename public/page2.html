@@ -25,7 +25,7 @@
     <script src="./utils.js"></script>
     <div class="container middle">
         <div class="pageMiddle">
-            <img class="coveredImage wide" src="images/page2.jpeg" id="middlepage-img" height=800 width=1200/>
+            <img class="coveredImage wide" src="images/page2.jpeg" onload={loadLink(this)} id="middlepage-img" height=800 width=1200/>
             <canvas class="coveringCanvas" id="myCanvas" onclick={getDetailsModal(this)} height=800 width=1200></canvas>
         </div>
         <div class="modal hide fade" tabindex="-1" role="dialog" id="modal">
