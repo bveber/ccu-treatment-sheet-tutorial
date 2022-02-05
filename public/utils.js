@@ -22,13 +22,9 @@ function createModal(box) {
     modalBody.setAttribute("name", box)
     modalBody.innerHTML = infos[box]
     $('#modal').modal("show")
-    console.log('showing...')
     var c = document.getElementById("myCanvas");
-    console.log('createModal - getElement: ', c)
     var ctx = c.getContext("2d");
     let coords = boundaries[box]
-    console.log('createModal - coords: ',coords)
-    console.log(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1))
     ctx.strokeStyle = "#000000";
     ctx.lineWidth = 2;
     ctx.strokeRect(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1));
@@ -39,14 +35,10 @@ function createInfo(box) {
     infoDiv.setAttribute("id", "infoContainer")
     infoDiv.setAttribute("name", box)
     infoDiv.innerHTML = infos[box]
-    console.log('createInfo: ', infoDiv)
     document.getElementById('info').appendChild(infoDiv)
     var c = document.getElementById("myCanvas");
-    console.log('createInfo - getElement: ', c)
     var ctx = c.getContext("2d");
     let coords = boundaries[box]
-    console.log('createInfo - coords: ',coords)
-    console.log(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1))
     ctx.strokeStyle = "#FF0000";
     ctx.strokeRect(coords.xMin, coords.yMin, (coords.xMax-coords.xMin-1), (coords.yMax-coords.yMin-1));
 }
@@ -54,10 +46,8 @@ function createInfo(box) {
 function loadDefaultModal() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    console.log(urlParams)
     if (urlParams.has('x') & urlParams.has('y')) {
         box = findBox(urlParams.get('x'), urlParams.get('y'), boundaries)
-        console.log(box)
         createModal(box)
     }
     else {
@@ -72,13 +62,11 @@ function loadDefault() {
 function loadLink() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    console.log(urlParams.get('x'))
     closeModal();
     clearRect();
     
     if (urlParams.has('x') & urlParams.has('y')) {
         box = findBox(urlParams.get('x'), urlParams.get('y'), boundaries)
-        console.log(box)
         createModal(box)
     }
 }
@@ -103,10 +91,8 @@ function deleteInfo(reset) {
 function getDetailsModal(){
     hoverX = window.event.pageX;
     hoverY = window.event.pageY;
-    console.log('general mouseover', window.event.pageX, window.event.pageY)
     box = findBox(hoverX, hoverY, boundaries)
     existingElement = document.getElementById("infoContainer")
-    console.log('existing Elements: ', existingElement)
     if (box) {
         createModal(box)
     } 
@@ -115,12 +101,9 @@ function getDetailsModal(){
 function getDetails(){
     hoverX = window.event.pageX;
     hoverY = window.event.pageY;
-    console.log('general mouseover', window.event.pageX, window.event.pageY)
     box = findBox(hoverX, hoverY, boundaries)
     existingElement = document.getElementById("infoContainer")
-    console.log('existing Elements: ', existingElement)
     if (box) {
-        console.log('box exists - box name: ', box)
         if (!document.getElementById("infoContainer")) {
             createInfo(box)
         }
@@ -142,10 +125,8 @@ function logXY() {
 }
 
 function openBackPageRemarks() {
-    console.log('openbackpage')
     location.href="./page3.html";
     box = findBox(300, 200, boundaries)
-    console.log(box)
     createInfo(box)
 }
 
@@ -160,15 +141,17 @@ document.addEventListener(
             ) & 
             ($('.modal').hasClass('show'))
       ) {
-        console.log('click')
         closeModal()
       }
     },
     false
   )
+
+  $(document).on('hidden.bs.modal','#modal', function () {
+    closeModal()
+  })
   
   function closeModal() {
-        console.log('clearing rect')
         clearRect();
         $('.modal').modal("hide")
         var url= document.location.href;
