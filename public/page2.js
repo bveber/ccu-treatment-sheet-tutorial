@@ -14,15 +14,17 @@ const weight = `
 
 const waterFood = `
 <h1>Food and Water Information</h1>
-<p>In this section, when to offer food and water is highlighted. The specific food and water prescription orders can be referenced from the <a href="./page1.html?x=450&y=300">front of the treatment sheet</a>. Information about the patient's intake of food or water is the included in the <a href="./page2.html?x=575&y=250">highlighted box</a> and noted in the <a href="./page3.html?x=450&y=300">Remarks section</a> on the back page of the treatment sheet</p>
+<p>In this section, when to offer food and water is highlighted.</p> 
+<p>The specific food and water prescription orders can be referenced from the <a href="./page1.html?x=450&y=300">front of the treatment sheet</a>.</p> 
+<p>Information about the patient's intake of food or water is the included in the <a href="./page2.html?x=575&y=250">highlighted box</a> and noted in the <a href="./page3.html?x=450&y=300">Remarks section</a> on the back page of the treatment sheet</p>
 `
 
 const infusions = `
 <h1>Infusion Flow Sheet</h1>
 <p>In this section, the name of the infusion is copied from the <a href="./page1.html?x=300&y=400">front of the treatment sheet</a>. This area is then used for tracking the infusions provided to the patient.</p>
-    <li>Boluses (of fluids or pain medications) are indicated by writing the amount given in a <a href="./page2.html?x=420&y=280">set of brackets "[]"</a>.</li>
-    <li>An open bracket is used to indicate when a specific infusion was started.</li>
-    <li>A closed bracket is used to indicate that a specific infusion was stopped.</li>
+    <li>Boluses (of fluids or pain medications) are indicated by writing the amount given in a <a href="./page2.html?x=420&y=280">set of brackets "[ ]"</a>.</li>
+    <li>An open bracket "[" is used to indicate when a specific infusion was started.</li>
+    <li>A closed bracket "]" is used to indicate that a specific infusion was stopped.</li>
     <li>Fluids are totaled every 4 hours. The total amount the fluid pump has delivered is recorded in the upper left of the divided box and a zero is recorded in the lower right of the divided box to indicate the fluid pump total has been reset. The set fluid rate is then recorded <a href="./page2.html?x=450&y=280">like this</a>.</li>
 `
 
@@ -37,10 +39,15 @@ const fluidOuts = `
 const tpr = `
 <h1>Patient Vitals</h1>
 <p>Parameters that are routinely monitored as part of TPR and physical monitoring of the patient are included in this section of the treatment sheet. It is important to include "Call Clinician If" guidelines (call parameters) for all of these patient vitals.</p>
-    <li>Make sure that call parameters are specific for your individual patients - if your patient is already febrile, do not set the call parameter the same as you would for a patient who has typically had a normal body temperature.</li>
+    <li>Make sure that call parameters are specific for your individual patients - for example, if your patient is already febrile, do not set the call parameter the same as you would for a patient who has typically had a normal body temperature.</li>
     <li>How frequently each of the vitals are assess is indicated by highlighting the <a href="./page2.html?x=575&y=500">corresponding boxes</a> along the flow sheet.</li>
-    <li>Good TPR times include 8a/8a for q12 TPRs, 8a/4p/12a for q8 TPRs and 8a/2p/8p/2a for q6 TPRs.</li>
-    <li>When making treatment sheets, please do not schedule any TPRs (unless critical) at 6a or 6p as this is when the CCU technicians round on the patients in the room. Non-critical TPRs scheduled for 6a/6p will likely get moved to a different treatment time.</li>
+    <li>Good TPR times include</li>
+    <ul> 
+        <li>8a/8a for q12 TPRs</li> 
+        <li>8a/4p/12a for q8 TPRs</li>
+        <li>8a/2p/8p/2a for q6 TPRs.</li>
+    </ul>
+<p>When making treatment sheets, please do not schedule any TPRs (unless critical) at 6a or 6p as this is when the CCU technicians round on the patients in the room. Non-critical TPRs scheduled for 6a/6p will likely get moved to a different treatment time.</p>
 `
 
 const pocMonitoring = `
@@ -51,7 +58,7 @@ const pocMonitoring = `
     <li>Cath Care: Urinary catheters or central venous catheters should be cleaned and assessed routinely. It is common for urinary catheters to be cleaned every 6-12 hours and central catheters to be unwrapped, cleaned/assessed and re-wrapped once daily.</li>
     <li>Oxygen Therapy: If a patient requires oxygen supplementation, the concentration (in L/min if connected to nasal oxygen or % if within the oxygen cage) should be ordered. The type of oxygen delivery should also be circled (Cage v. Nasal). This line can be highlighted at the time oxygen supplementation is started. Changes to the amount of oxygen supplementation can also be recorded at the time the change occurs, using an up or down arrown and then writing the new oxygen rate.</li>
     <li>Pulse Oximeter: Highlight this box when a SpO2 should be tested. You can include instructions to test both on oxygen supplementation and off oxygen supplementation if needed.</li>
-    <li>Blood Pressure: Circle the type of blood pressure measurement (DOP,OSC or DIR) and highlight when a blood pressure measurement should be taken. Most stable patients do not need blood pressure measurements more than once daily. Patients with diseases that could alter the blood pressure or who are on medications that may change blood pressure should have more frequent blood pressure monitoring.</li>
+    <li>Blood Pressure: Circle the type of blood pressure measurement (DOP, OSC or DIR) and highlight when a blood pressure measurement should be taken. Most stable patients do not need blood pressure measurements more than once daily. Patients with diseases that could alter the blood pressure or who are on medications that may change blood pressure should have more frequent blood pressure monitoring.</li>
 `
 
 const rotate = `
@@ -68,21 +75,28 @@ const completedTreatments1 = `
 const orderedTreatment1 = `
 <h1>Ordered Treatments</h1>
 <p>Treatments that have been ordered but not yet completed are highlighted.</p>
-    <li>Good treatment times include 8a/8a for q12 treatments, 8a/4p/12a for q8 treatments and 8a/2p/8p/2a for q6 treatments.</li>
-    <li>When making treatment sheets, please do not schedule any treatments (unless critical) at 6a or 6p as this is when the CCU technicians round on the patients in the room. Non-critical treatments scheduled for 6a/6p will likely get moved to a different treatment time.</li>
+    <li>Good treatment times include:</li>
+    <ul> 
+        <li>8a/8a for q12 treatments</li> 
+        <li>8a/4p/12a for q8 treatments</li>
+        <li>8a/2p/8p/2a for q6 treatments.</li>
+    </ul>
+<p>When making treatment sheets, please do not schedule any treatments (unless critical) at 6a or 6p as this is when the CCU technicians round on the patients in the room. Non-critical treatments scheduled for 6a/6p will likely get moved to a different treatment time.</p>
 `
 
 const waterFood1 = `
 <h1>Water/Food Entry</h1>
 <p>After a patient is offered food and water, brief information about their intake is included in this section.</p>
-    <li>In the Water line: "Fresh" means that the water bowl was refilled. "Avail" means that clean water is available to the pet but no drinking was observed. If a patient drinks when you offer water, or you see a patient drinking while you are in CCU, plus signs are used to indicate water intake.</li>
-    <li>In the Food line: "NI" means food was offered but the patient did not eat. Plus signs are used to indicate food intake. A small amount of intake (a few licks up to a few bites) is indicated with a single plus (+) while a patient that eats all the food offered would have a three plus (+++) written in this section.</li>
-    <li>Additional notes about the type of food offered and the patient's intake should then be written as a remark on the back side of the treatment sheet for every time a patient is offered food or water.</li>
-`
+    <li>In the Water line: "Fresh" means that the water bowl was refilled. "Avail" means that clean water is available to the patient but no drinking was observed. If a patient drinks when you offer water, or you see a patient drinking while you are in CCU, plus signs are used to indicate water intake.</li>
+    <li>In the Food line: "NI" means food was offered but the patient did not eat (not interested). Plus signs are used to indicate food intake. A small amount of intake (a few licks up to a few bites) is indicated with a single plus (+) while a patient that eats all the food offered would have a three plus (+++) written in this section.</li>
+    <li>Additional notes about the type of food offered and the patient's intake should then be written as a <a href="./page3.html?x=300&y=100">remark</a> on the back side of the treatment sheet for every time a patient is offered food or water.</li>
+<br>
+    <p>If a patient is scheduled for a procedure the next day, such as an abdominal ultrasound, sedation or general anesthesia, make sure to indicate the patient should not have food available after midnight. Access to water is okay prior to sedation or anesthesia unless the patient has a specific contraindication.</p>
+    `
 
 const infusions1 = `
 <h1>Infusion Bolus</h1>
-<p>A bolus of a fluid or medication that is provided to the patient is written in square brackets "[]". Since the infusion prescription is written on the front of the treatment sheet, only the total infusion bolus needs to be included while units (mL, mg, mcg) are not included.</p>
+<p>A bolus of a fluid or medication that is provided to the patient is written in square brackets "[ ]". Since the infusion prescription is written on the front of the treatment sheet, only the total infusion bolus needs to be included while units (mL, mg, mcg) are not included.</p>
     <li>When reading a treatment sheet when a bolus has been given, you can refer to the front page of the CCU Treatment Sheet for that infusion to determine additional details about that bolus.</li>
 `
 
@@ -107,8 +121,9 @@ const infusions4 = `
 
 const infusions5 = `
 <h1>Change to Infusion Type or Additives</h1>
-<p>Any time the type of fluid or the fluid additives (dextrose, KCl, Kphos) are changed, a new infusion should be prescribed on the <a href="./page1.html?x=300&y=400">front of the CCU Treatment Sheet</a> and added as a new line in the infusions section of the flow sheet. Changing the fluid rate without changing the type or fluid or additives can be denoted on the same infusions line <a href="./page2.html?x=800&y=325">like this</a>.<p>
-    <li>In this example, the previous infusion of plyte was stopped (indicated by a closed bracket) and a new infusion of plyte + 5% dextrose was started at 80 mL/hr.</li>
+<p>Any time the type of fluid or the fluid additives (dextrose, KCl, KPhos) are changed, a new infusion should be prescribed on the <a href="./page1.html?x=300&y=400">front of the CCU Treatment Sheet</a> and added as a new line in the infusions section of the flow sheet.<p> 
+<p>Changing the fluid rate without changing the type or fluid or additives can be denoted on the same infusions line <a href="./page2.html?x=800&y=325">like this</a>.</p>
+<p>In this example, the previous infusion of plyte was stopped (indicated by a closed bracket) and a new infusion of plyte + 5% dextrose was started at 80 mL/hr, indicated by an open bracket and the infusion rate.</p>
 `
 
 const infusions6 = `
@@ -122,8 +137,14 @@ const infusions6 = `
 
 const infusions7 = `
 <h1>Change to Infusion Rate</h1>
-<p>Changing the fluid rate without changing the type or fluid or additives can be denoted on the same infusions line. An increase in rate is denoted with an up arrow and the new rate while a decrease in fluid rate is denoted by a down arrow and the new rate. This is in contrast to when the infusion type or additives are changed and a new prescription/new infusion line is needed <a href="./page2.html?x=600&y=325">like this</a>.</p>
-    <li>In this example, the fluid rate was decreased to 40 mL/hr. The fluid type (plyte) and additives (5% dextrose) remained unchanged.</li>
+<p>Changing the fluid rate without changing the type or fluid or additives can be denoted on the same infusions line.<p>
+<ul> 
+    <li>An increase in rate is denoted with an up arrow and the new rate while a decrease in fluid rate is denoted by a down arrow and the new rate.</li> 
+</ul>
+<br>
+<p>This is in contrast to when the infusion type or additives are changed and a new prescription/new infusion line is needed <a href="./page2.html?x=600&y=325">like this</a>.</p>
+<br>
+<p>In this example, the fluid rate was decreased to 40 mL/hr. The fluid type (plyte) and additives (5% dextrose) remained unchanged.</p>
 `
 
 const tpr1 = `
@@ -137,7 +158,7 @@ const tpr2 = `
 `
 
 const tpr3 = `
-<h1>TPR Entry</h1>
+<h1>TPR Order</h1>
 <p>The treatment sheet is highlighted when a full or partial TPR is ordered.</p>
 `
 
@@ -155,7 +176,7 @@ boundaries = {
     },
     weight: {
         xMin: 5,
-        xMax: 340,
+        xMax: 1200,
         yMin: 198,
         yMax: 216
     },
@@ -234,7 +255,7 @@ boundaries = {
     waterFood3: {
         xMin: 905,
         xMax: 1195,
-        yMin: 246,
+        yMin: 230,
         yMax: 262
     },
     infusions1: {
