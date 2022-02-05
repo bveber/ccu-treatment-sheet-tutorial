@@ -1,9 +1,12 @@
 const therapeutics = `
 <h1>Therapeutics</h1>
 <p>In this section, information about the therapy prescribed is included. This section may include medications and treatments.</p>
-    <li>For medications please include the medication name, total dose, route and frequency.</li>
+    <li>For medications please include the medication name, total dose (most commonly in mg or mcg), route and frequency.</li>
     <li>Other treatments that may be recorded in this section include icing incisions, placing or checking fentanyl patches, additional weight monitoring, etc.</li>
     <li>When creating a new day's treatment sheet for a patient you take over on transfer, not all of the previous therapeutics need to be copied to the new treatment sheet. A common example of this is the sedation used in ER that was provided as a one time only treatment. Think about each therapeutic and decide if it needs to be continued.</li>
+<br>
+<p>Information about the best times to schedule therapeutics <a href="./page2.html?x=925&y=50">can be found here</a></p>
+<p>Therapeutics highlighted and scheduled for 8am are the responsibility of the student or doctor on the patient's primary service. These therapeutics are typically completed by the student on the primary service who is assigned to that patient. If you are responsible for completing the 8am therapeutics and TPR, please make sure to arrive early enough that all highlighted items are completed by 8am.</p>
 `
 
 const weight = `
@@ -46,8 +49,10 @@ const tpr = `
         <li>8a/8a for q12 TPRs</li> 
         <li>8a/4p/12a for q8 TPRs</li>
         <li>8a/2p/8p/2a for q6 TPRs.</li>
+        <li>Avoid odd-numered hours unless it is a critical TPR</li>
     </ul>
 <p>When making treatment sheets, please do not schedule any TPRs (unless critical) at 6a or 6p as this is when the CCU technicians round on the patients in the room. Non-critical TPRs scheduled for 6a/6p will likely get moved to a different treatment time.</p>
+<p>TPRs highlighted and scheduled for 8am are the responsibility of the patient's primary service. These TPRs are typically completed by the student on the primary service who is assigned to that patient. If you are responsible for completing the 8am therapeutics and TPR, please make sure to arrive early enough that all highlighted items are completed by 8am.</p>
 `
 
 const pocMonitoring = `
@@ -80,6 +85,7 @@ const orderedTreatment1 = `
         <li>8a/8a for q12 treatments</li> 
         <li>8a/4p/12a for q8 treatments</li>
         <li>8a/2p/8p/2a for q6 treatments.</li>
+        <li>Avoid odd-numered hours unless it is a critical treatment</li>
     </ul>
 <p>When making treatment sheets, please do not schedule any treatments (unless critical) at 6a or 6p as this is when the CCU technicians round on the patients in the room. Non-critical treatments scheduled for 6a/6p will likely get moved to a different treatment time.</p>
 `

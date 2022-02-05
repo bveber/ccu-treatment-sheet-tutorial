@@ -57,7 +57,7 @@ const infusions = `
 <ul>
     <li>Fluids (plyte, 0.45% NaCl, plasma (FP/FFP), packed red blood cells (pRBC)</li>
     <li>Pain CRI's (ketamine, fentanyl)</li>
-    <li>Sedation (midazolam, butorphanol, dexmedetomidine)
+    <li>Sedation CRI's (midazolam, butorphanol, dexmedetomidine)
     <li>Pressors (norepinephrine, dobutamine, vasopressin)</li>
     <li>Liquid nutrition via NG tubes</li>
 </ul>
@@ -136,11 +136,17 @@ const procedures = `
 `
 
 const specialInstructions = `
-<h1>Procedures Performed</h1>
+<h1>Special Instructions</h1>
 <p>This section is where more detailed instructions can be included for anything involving patient care or treatments.</p>
 <ul>
     <li>Common items to include in this area include: seizure orders, E-tube feeding information, information about client belongings or orders for treatments if a specific parameter changes.</li>
 </ul>
+<br>
+<p>This section also has an area to denote if a patient should be taken outside to eliminate</p>
+<ul>
+    <li>Y = yes, the patient can be walked outside. Please also indicate if there are special instructions such as using a sling to walk or carting outside</li>
+    <li>N = no, the patient should not be walked outside. This might apply to some patients immediately after a surgery (such as a hemilaminectomy), infectious patients in isolation or patients dependent on oxygen who cannot tolerate the time off oxygen.</li>
+</ul)
 `
 
 boundaries = {
